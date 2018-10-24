@@ -10,12 +10,24 @@ using System.Windows.Forms;
 using System.CodeDom.Compiler;
 using System.Diagnostics;
 using System.IO;
+using ICSharpCode.TextEditor;
+using ICSharpCode.TextEditor.Document;
 
 namespace CSharpScripter {
    public partial class FormMain : Form {
+      TextEditorControl tbxCode;
       public FormMain() {
          InitializeComponent();
+         InitializeEditor();
          Console.SetOut(new TextBoxWriter(this.tbxRun));
+      }
+
+      private void InitializeEditor() {
+         this.tbxCode = new TextEditorControl();
+         this.tbxCode.Dock = DockStyle.Fill;
+         this.tbxCode.BorderStyle = BorderStyle.FixedSingle;
+         this.tbxCode.Document.HighlightingStrategy = HighlightingStrategyFactory.CreateHighlightingStrategy("C#");
+         this.pnlEditor.Controls.Add(this.tbxCode);
       }
 
       private void Run() {
@@ -82,30 +94,6 @@ namespace CSharpScripter {
 
       private void FormMain_FormClosing(object sender, FormClosingEventArgs e) {
          this.SaveCode();
-      }
-
-      private void tbxCode_KeyDown(object sender, KeyEventArgs e) {
-         if (e.KeyCode == Keys.Escape) {
-            this.tbxCode.SelectionLength = 0;
-            return;
-         }
-
-         if (e.KeyCode == Keys.A && e.Control) {
-            this.tbxCode.SelectAll();
-            return;
-         }
-
-         if (e.KeyCode == Keys.F5) {
-            this.Run();
-         }
-      }
-
-      private void tbxCode_KeyPress(object sender, KeyPressEventArgs e) {
-         if (e.KeyChar == (char)Keys.Tab) {
-            e.Handled = true;
-            int numSpaces = 4 - ((tbxCode.SelectionStart - tbxCode.GetFirstCharIndexOfCurrentLine()) % 4);
-            tbxCode.SelectedText = new string(' ', numSpaces);
-         }
       }
    }
 }

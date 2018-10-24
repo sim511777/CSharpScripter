@@ -25,7 +25,22 @@ namespace CSharpScripter.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"using System;
+using System.IO;
+
+namespace Test 
+{
+    class MyClass {
+        public static void Main() {
+            for (int i=1; i<=9; i++) {
+                for (int j=2; j<=9; j++) {
+                    Console.Write(""{0}*{1}={2:00} "", j, i, j*i);
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}")]
         public string code {
             get {
                 return ((string)(this["code"]));

@@ -23,15 +23,14 @@
       /// 이 메서드의 내용을 코드 편집기로 수정하지 마세요.
       /// </summary>
       private void InitializeComponent() {
-         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
          this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-         this.tbxCode = new System.Windows.Forms.TextBox();
          this.panel1 = new System.Windows.Forms.Panel();
          this.btnClear = new System.Windows.Forms.Button();
          this.btnSave = new System.Windows.Forms.Button();
          this.btnLoad = new System.Windows.Forms.Button();
          this.btnRun = new System.Windows.Forms.Button();
          this.tbxRun = new System.Windows.Forms.TextBox();
+         this.pnlEditor = new System.Windows.Forms.Panel();
          ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
          this.splitContainer1.Panel1.SuspendLayout();
          this.splitContainer1.Panel2.SuspendLayout();
@@ -48,7 +47,7 @@
          // 
          // splitContainer1.Panel1
          // 
-         this.splitContainer1.Panel1.Controls.Add(this.tbxCode);
+         this.splitContainer1.Panel1.Controls.Add(this.pnlEditor);
          this.splitContainer1.Panel1.Controls.Add(this.panel1);
          // 
          // splitContainer1.Panel2
@@ -57,22 +56,6 @@
          this.splitContainer1.Size = new System.Drawing.Size(1130, 718);
          this.splitContainer1.SplitterDistance = 520;
          this.splitContainer1.TabIndex = 0;
-         // 
-         // tbxCode
-         // 
-         this.tbxCode.AcceptsTab = true;
-         this.tbxCode.Dock = System.Windows.Forms.DockStyle.Fill;
-         this.tbxCode.Font = new System.Drawing.Font("Consolas", 10F);
-         this.tbxCode.Location = new System.Drawing.Point(0, 0);
-         this.tbxCode.Multiline = true;
-         this.tbxCode.Name = "tbxCode";
-         this.tbxCode.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-         this.tbxCode.Size = new System.Drawing.Size(1130, 482);
-         this.tbxCode.TabIndex = 1;
-         this.tbxCode.Text = resources.GetString("tbxCode.Text");
-         this.tbxCode.WordWrap = false;
-         this.tbxCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbxCode_KeyDown);
-         this.tbxCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxCode_KeyPress);
          // 
          // panel1
          // 
@@ -139,6 +122,14 @@
          this.tbxRun.Size = new System.Drawing.Size(1130, 194);
          this.tbxRun.TabIndex = 2;
          // 
+         // pnlEditor
+         // 
+         this.pnlEditor.Dock = System.Windows.Forms.DockStyle.Fill;
+         this.pnlEditor.Location = new System.Drawing.Point(0, 0);
+         this.pnlEditor.Name = "pnlEditor";
+         this.pnlEditor.Size = new System.Drawing.Size(1130, 482);
+         this.pnlEditor.TabIndex = 1;
+         // 
          // FormMain
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -146,11 +137,10 @@
          this.ClientSize = new System.Drawing.Size(1130, 718);
          this.Controls.Add(this.splitContainer1);
          this.Name = "FormMain";
-         this.Text = "Form1";
+         this.Text = "C# Scripter";
          this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
          this.Load += new System.EventHandler(this.FormMain_Load);
          this.splitContainer1.Panel1.ResumeLayout(false);
-         this.splitContainer1.Panel1.PerformLayout();
          this.splitContainer1.Panel2.ResumeLayout(false);
          this.splitContainer1.Panel2.PerformLayout();
          ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -163,13 +153,13 @@
       #endregion
 
       private System.Windows.Forms.SplitContainer splitContainer1;
-      private System.Windows.Forms.TextBox tbxCode;
       private System.Windows.Forms.Panel panel1;
       private System.Windows.Forms.Button btnRun;
       private System.Windows.Forms.TextBox tbxRun;
       private System.Windows.Forms.Button btnClear;
       private System.Windows.Forms.Button btnSave;
       private System.Windows.Forms.Button btnLoad;
+      private System.Windows.Forms.Panel pnlEditor;
    }
 }
 

@@ -117,24 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="tbxCode.Text" xml:space="preserve">
-    <value>using System;
-using System.IO;
-
-namespace Test 
-{
-    class MyClass
-    {                
-        public static int Add(int a, int b)
-        {                        
-            return a + b;
-        }
-
-        public static void Main() {
-            int sum = Add(10, 20);
-            Console.WriteLine(sum);
-        }
-    }
-}</value>
-  </data>
 </root>
