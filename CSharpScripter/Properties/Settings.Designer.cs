@@ -12,7 +12,7 @@ namespace CSharpScripter.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.7.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.8.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -28,16 +28,13 @@ namespace CSharpScripter.Properties {
         [global::System.Configuration.DefaultSettingValueAttribute(@"using System;
 using System.IO;
 
-namespace Test 
-{
-    class MyClass {
-        public static void Main() {
-            for (int i=1; i<=9; i++) {
-                for (int j=2; j<=9; j++) {
-                    Console.Write(""{0}*{1}={2:00} "", j, i, j*i);
-                }
-                Console.WriteLine();
+class Test {
+    public static void Main() {
+        for (int i=1; i<=9; i++) {
+            for (int j=2; j<=9; j++) {
+                Console.Write(""{0}*{1}={2:00} "", j, i, j*i);
             }
+            Console.WriteLine();
         }
     }
 }")]

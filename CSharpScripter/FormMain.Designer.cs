@@ -63,7 +63,7 @@
          // 
          this.pnlEditor.Controls.Add(this.tbxCode);
          this.pnlEditor.Dock = System.Windows.Forms.DockStyle.Fill;
-         this.pnlEditor.Location = new System.Drawing.Point(0, 0);
+         this.pnlEditor.Location = new System.Drawing.Point(0, 38);
          this.pnlEditor.Name = "pnlEditor";
          this.pnlEditor.Size = new System.Drawing.Size(1130, 482);
          this.pnlEditor.TabIndex = 1;
@@ -86,8 +86,8 @@
          this.panel1.Controls.Add(this.btnSave);
          this.panel1.Controls.Add(this.btnLoad);
          this.panel1.Controls.Add(this.btnRun);
-         this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-         this.panel1.Location = new System.Drawing.Point(0, 482);
+         this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+         this.panel1.Location = new System.Drawing.Point(0, 0);
          this.panel1.Name = "panel1";
          this.panel1.Size = new System.Drawing.Size(1130, 38);
          this.panel1.TabIndex = 0;

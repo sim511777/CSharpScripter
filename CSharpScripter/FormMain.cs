@@ -38,7 +38,7 @@ namespace CSharpScripter {
 
          // 출력 메시지
          foreach (var result in results.Output) {
-            this.tbxRun.AppendText(result+Environment.NewLine);
+            Console.WriteLine(result);
          }
 
          // 에러가 있으면
@@ -47,10 +47,18 @@ namespace CSharpScripter {
 
          // 에러 없으면
          // 어셈블리 로딩
-         Type myType = results.CompiledAssembly.GetType("Test");
+         Type startClass = results.CompiledAssembly.GetType("Test");
+         if (startClass == null) {
+            Console.WriteLine("StartUp Class must be \"Test\"");
+            return;
+         }
          // 메인함수 실행
-         var mi = myType.GetMethod("Main");
-         mi.Invoke(null, new object[0]);
+         var startMethod = startClass.GetMethod("Main");
+         if (startMethod == null) {
+            Console.WriteLine("StartUp Method must be \"Main\"");
+            return;
+         }
+         startMethod.Invoke(null, new object[0]);
          Console.WriteLine("Finished");
       }
 
