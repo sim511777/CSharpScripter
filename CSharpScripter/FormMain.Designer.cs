@@ -24,17 +24,19 @@
       /// </summary>
       private void InitializeComponent() {
          this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+         this.pnlEditor = new System.Windows.Forms.Panel();
+         this.tbxCode = new ICSharpCode.TextEditor.TextEditorControl();
          this.panel1 = new System.Windows.Forms.Panel();
          this.btnClear = new System.Windows.Forms.Button();
          this.btnSave = new System.Windows.Forms.Button();
          this.btnLoad = new System.Windows.Forms.Button();
          this.btnRun = new System.Windows.Forms.Button();
          this.tbxRun = new System.Windows.Forms.TextBox();
-         this.pnlEditor = new System.Windows.Forms.Panel();
          ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
          this.splitContainer1.Panel1.SuspendLayout();
          this.splitContainer1.Panel2.SuspendLayout();
          this.splitContainer1.SuspendLayout();
+         this.pnlEditor.SuspendLayout();
          this.panel1.SuspendLayout();
          this.SuspendLayout();
          // 
@@ -56,6 +58,27 @@
          this.splitContainer1.Size = new System.Drawing.Size(1130, 718);
          this.splitContainer1.SplitterDistance = 520;
          this.splitContainer1.TabIndex = 0;
+         // 
+         // pnlEditor
+         // 
+         this.pnlEditor.Controls.Add(this.tbxCode);
+         this.pnlEditor.Dock = System.Windows.Forms.DockStyle.Fill;
+         this.pnlEditor.Location = new System.Drawing.Point(0, 0);
+         this.pnlEditor.Name = "pnlEditor";
+         this.pnlEditor.Size = new System.Drawing.Size(1130, 482);
+         this.pnlEditor.TabIndex = 1;
+         // 
+         // tbxCode
+         // 
+         this.tbxCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+         this.tbxCode.ConvertTabsToSpaces = true;
+         this.tbxCode.Dock = System.Windows.Forms.DockStyle.Fill;
+         this.tbxCode.IsReadOnly = false;
+         this.tbxCode.Location = new System.Drawing.Point(0, 0);
+         this.tbxCode.Name = "tbxCode";
+         this.tbxCode.Size = new System.Drawing.Size(1130, 482);
+         this.tbxCode.TabIndex = 0;
+         this.tbxCode.Text = "textEditorControl1";
          // 
          // panel1
          // 
@@ -122,14 +145,6 @@
          this.tbxRun.Size = new System.Drawing.Size(1130, 194);
          this.tbxRun.TabIndex = 2;
          // 
-         // pnlEditor
-         // 
-         this.pnlEditor.Dock = System.Windows.Forms.DockStyle.Fill;
-         this.pnlEditor.Location = new System.Drawing.Point(0, 0);
-         this.pnlEditor.Name = "pnlEditor";
-         this.pnlEditor.Size = new System.Drawing.Size(1130, 482);
-         this.pnlEditor.TabIndex = 1;
-         // 
          // FormMain
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -145,6 +160,7 @@
          this.splitContainer1.Panel2.PerformLayout();
          ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
          this.splitContainer1.ResumeLayout(false);
+         this.pnlEditor.ResumeLayout(false);
          this.panel1.ResumeLayout(false);
          this.ResumeLayout(false);
 
@@ -160,6 +176,7 @@
       private System.Windows.Forms.Button btnSave;
       private System.Windows.Forms.Button btnLoad;
       private System.Windows.Forms.Panel pnlEditor;
+      private ICSharpCode.TextEditor.TextEditorControl tbxCode;
    }
 }
 

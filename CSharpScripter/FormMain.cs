@@ -15,19 +15,11 @@ using ICSharpCode.TextEditor.Document;
 
 namespace CSharpScripter {
    public partial class FormMain : Form {
-      TextEditorControl tbxCode;
       public FormMain() {
          InitializeComponent();
-         InitializeEditor();
-         Console.SetOut(new TextBoxWriter(this.tbxRun));
-      }
-
-      private void InitializeEditor() {
-         this.tbxCode = new TextEditorControl();
-         this.tbxCode.Dock = DockStyle.Fill;
-         this.tbxCode.BorderStyle = BorderStyle.FixedSingle;
          this.tbxCode.Document.HighlightingStrategy = HighlightingStrategyFactory.CreateHighlightingStrategy("C#");
-         this.pnlEditor.Controls.Add(this.tbxCode);
+
+         Console.SetOut(new TextBoxWriter(this.tbxRun));
       }
 
       private void Run() {
@@ -55,7 +47,7 @@ namespace CSharpScripter {
 
          // 에러 없으면
          // 어셈블리 로딩
-         Type myType = results.CompiledAssembly.GetType("Test.MyClass");
+         Type myType = results.CompiledAssembly.GetType("Test");
          // 메인함수 실행
          var mi = myType.GetMethod("Main");
          mi.Invoke(null, new object[0]);
