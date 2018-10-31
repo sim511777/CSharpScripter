@@ -55,8 +55,8 @@
          // splitContainer1.Panel2
          // 
          this.splitContainer1.Panel2.Controls.Add(this.tbxRun);
-         this.splitContainer1.Size = new System.Drawing.Size(1130, 718);
-         this.splitContainer1.SplitterDistance = 520;
+         this.splitContainer1.Size = new System.Drawing.Size(718, 589);
+         this.splitContainer1.SplitterDistance = 426;
          this.splitContainer1.TabIndex = 0;
          // 
          // pnlEditor
@@ -65,7 +65,7 @@
          this.pnlEditor.Dock = System.Windows.Forms.DockStyle.Fill;
          this.pnlEditor.Location = new System.Drawing.Point(0, 38);
          this.pnlEditor.Name = "pnlEditor";
-         this.pnlEditor.Size = new System.Drawing.Size(1130, 482);
+         this.pnlEditor.Size = new System.Drawing.Size(718, 388);
          this.pnlEditor.TabIndex = 1;
          // 
          // tbxCode
@@ -76,7 +76,7 @@
          this.tbxCode.IsReadOnly = false;
          this.tbxCode.Location = new System.Drawing.Point(0, 0);
          this.tbxCode.Name = "tbxCode";
-         this.tbxCode.Size = new System.Drawing.Size(1130, 482);
+         this.tbxCode.Size = new System.Drawing.Size(718, 388);
          this.tbxCode.TabIndex = 0;
          this.tbxCode.Text = "textEditorControl1";
          // 
@@ -89,7 +89,7 @@
          this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
          this.panel1.Location = new System.Drawing.Point(0, 0);
          this.panel1.Name = "panel1";
-         this.panel1.Size = new System.Drawing.Size(1130, 38);
+         this.panel1.Size = new System.Drawing.Size(718, 38);
          this.panel1.TabIndex = 0;
          // 
          // btnClear
@@ -142,14 +142,14 @@
          this.tbxRun.Name = "tbxRun";
          this.tbxRun.ReadOnly = true;
          this.tbxRun.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-         this.tbxRun.Size = new System.Drawing.Size(1130, 194);
+         this.tbxRun.Size = new System.Drawing.Size(718, 159);
          this.tbxRun.TabIndex = 2;
          // 
          // FormMain
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         this.ClientSize = new System.Drawing.Size(1130, 718);
+         this.ClientSize = new System.Drawing.Size(718, 589);
          this.Controls.Add(this.splitContainer1);
          this.Name = "FormMain";
          this.Text = "C# Scripter";
