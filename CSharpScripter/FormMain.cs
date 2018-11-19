@@ -41,25 +41,28 @@ namespace CSharpScripter {
             Console.WriteLine(result);
          }
 
-         // 에러가 있으면
-         if (results.Errors.Count != 0)
+         if (results.Errors.Count != 0) {
+            Console.WriteLine("===============================");
             return;
+         }
 
          // 에러 없으면
          // 어셈블리 로딩
          Type startClass = results.CompiledAssembly.GetType("Test");
          if (startClass == null) {
             Console.WriteLine("StartUp Class must be \"Test\"");
+            Console.WriteLine("===============================");
             return;
          }
          // 메인함수 실행
          var startMethod = startClass.GetMethod("Main");
          if (startMethod == null) {
             Console.WriteLine("StartUp Method must be \"Main\"");
+            Console.WriteLine("===============================");
             return;
          }
          startMethod.Invoke(null, new object[0]);
-         Console.WriteLine("Finished");
+         Console.WriteLine("===============================");
       }
 
       private void btnRun_Click(object sender, EventArgs e) {
